@@ -1,0 +1,4 @@
+- fix some false flag wordpress nagging
+- implement support for custom stamp and signature added via settings
+- localize third party placeholder image and javascript
+- better sanitization 

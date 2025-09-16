@@ -1,0 +1,281 @@
+/* certsystem plugin base frontend CSS. This file is required for WordPress inline styles to work. */
+
+:root {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / .5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --certsystem-primary: #435d7d;
+    --certsystem-primary-light: #2c3e5038;
+    --certsystem-primary-border: #2c3e5038;
+    --certsystem-text: #1f2937;
+    --certsystem-text-light: #6b7280;
+    --certsystem-bg: #ffffff;
+    --certsystem-surface: #f9fafb;
+}
+
+.cf-search {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    line-height: inherit;
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+    font-variant-numeric: normal;
+    box-sizing: border-box;
+    border-style: solid;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    width: 700px;
+    margin: 40px auto 30px auto !important;
+    background-color: var(--certsystem-primary-light);
+    border: 1px solid var(--certsystem-primary-border);
+    border-radius: 3px;
+    padding: 2rem;
+    opacity: 1;
+    transform: none;
+}
+.cf-search form {
+    display: inline-flex;
+    width: 100%;
+    gap: 0.75rem;
+    align-items: center;
+}
+.cf-field {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    display: inline-block !important;
+    border: 1px solid var(--certsystem-primary-border) !important;
+    margin-bottom: 0px !important;
+    width: 90%;
+    padding: 0.75rem 1rem;
+    height: 47px;
+    border-radius: 3px;
+    background: var(--certsystem-bg);
+    color: var(--certsystem-text);
+    font-size: 1rem;
+}
+.cf-field:focus {
+    outline: none;
+    border-color: var(--certsystem-primary);
+    box-shadow: 0 0 0 3px var(--certsystem-primary-light);
+}
+.cf-btn {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    display: inline-block;
+    border: none;
+    height: 47px !important;
+    width: 200px;
+    background: var(--certsystem-primary) !important;
+    color: #fff !important;
+    min-height: 47px;
+    border-radius: 3px !important;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cf-btn:hover {
+    background: #2c3e50 !important;
+}
+.success {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #065f46;
+    background-color: #d1fae5;
+    position: relative;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #a7f3d0;
+    border-radius: 0.75rem;
+    font-weight: 500;
+}
+.danger {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #991b1b;
+    background-color: #fee2e2;
+    position: relative;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #fecaca;
+    border-radius: 0.75rem;
+    font-weight: 500;
+}
+@media screen and ( max-width: 768px ){
+    .cf-search{ width: 90%; }
+}
+@media screen and ( max-width: 480px ){
+    .cf-search form { display: initial; }
+    .cf-field, .cf-btn {
+        display: block !important;
+        width: 100%;
+    }
+}
+.cf-result-card {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    line-height: inherit;
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+    font-variant-numeric: normal;
+    box-sizing: border-box;
+    border-style: solid;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    background: var(--certsystem-bg);
+    border-radius: 3px;
+    border: 1px solid var(--certsystem-primary-border);
+    background-color: var(--certsystem-primary-light);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    color: var(--certsystem-text);
+    opacity: 1;
+    transform: none;
+}
+.cf-result-card .cf-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #eceefb;
+}
+.cf-result-card .cf-row:last-child {
+    border-bottom: none;
+}
+.cf-result-card .cf-label {
+    flex: 0 0 180px;
+    font-weight: 700;
+    color: #000000;
+    text-align: left;
+    letter-spacing: 0.5px;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+.cf-result-card .cf-value {
+    flex: 1;
+    color: var(--certsystem-text);
+    text-align: left;
+    font-weight: 500;
+    padding-left: 48px;
+    word-break: break-word;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+.rs-heading {
+    text-align: center;
+}
+.search-table {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    border-spacing: 0 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    min-width: 100%;
+    border-bottom: 1px solid var(--certsystem-primary-border);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.search-table thead {
+    background-color: transparent;
+}
+.search-table thead tr th {
+    background-color: var(--certsystem-primary) !important;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+.search-table tbody tr td {
+    border-right: 1px solid var(--certsystem-primary-border);
+    padding: 1rem 0.75rem;
+    text-align: center;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    background: var(--certsystem-bg);
+}
+.search-table tbody tr:nth-child(even) td {
+    background: var(--certsystem-surface);
+}
+.br-0 {
+    border-right: none !important
+}
+body {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    line-height: inherit;
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+    font-variant-numeric: normal;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    color: var(--certsystem-text);
+    background-color: var(--certsystem-surface);
+}
+.btlr-10{ border-top-left-radius: 10px; }
+.btrr-10{ border-top-right-radius: 10px; }
+.bl-1{ border-left: 1px solid #ddd; }
+.cf-result-card .cf-value.date-field {
+    font-weight: 700;
+    color: #000000;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+button#certsystem-close-iframe {
+position: fixed;
+top: 20px;
+right: 20px;
+background: #c52222;
+color: white;
+border: none;
+width: 50px;
+height: 50px;
+cursor: pointer;
+font-size: 20px;
+display: flex;
+margin: 24px 100px 0px 0px;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+transition: all 0.2s ease;
+border-radius: 3px;
+}
+
+
+button#certsystem-close-iframe:hover {
+background: #991818;
+transform: scale(1.1);
+}
+
+.new-tab-btn {
+    margin-left: 8px;
+}
+
+

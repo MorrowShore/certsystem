@@ -1,0 +1,1390 @@
+/**
+ * certsystem Admin CSS - Bootstrap Replacement
+ * Comprehensive styling for the certificate management interface
+ */
+
+/* Base Styles */
+.certsystem-admin-body { 
+    margin-top: 32px !important; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    background: #f1f1f1;
+}
+
+/* Container */
+.certsystem-container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Table Wrapper */
+.certsystem-table-wrapper { 
+    background: #fff; 
+    padding: 25px; 
+    margin: 30px 0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08); 
+}
+
+/* Table Title */
+.certsystem-table-title { 
+    padding: 25px; 
+    background: linear-gradient(135deg, #435d7d 0%, #2c3e50 100%); 
+    color: #fff; 
+    margin: -25px -25px 25px; 
+    border-radius: 8px 8px 0 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.certsystem-table-title h2 { 
+    margin: 0; 
+    font-size: 24px; 
+    font-weight: 600;
+    color: #fff;
+}
+
+.certsystem-cs-button-container { 
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.certsystem-btn { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-height: 44px;
+    gap: 8px;
+}
+
+.certsystem-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.certsystem-btn-primary { 
+    background: #007cba; 
+    color: white;
+}
+
+.certsystem-btn-primary:hover { 
+    background: #006ba1; 
+}
+
+.certsystem-btn-success { 
+    background: #46b450; 
+    color: white;
+}
+
+.certsystem-btn-success:hover { 
+    background: #3a9e43; 
+}
+
+.certsystem-btn-danger { 
+    background: #dc3232; 
+    color: white;
+}
+
+.certsystem-btn-danger:hover { 
+    background: #c32222; 
+}
+
+.certsystem-btn-secondary { 
+    background: #6c757d; 
+    color: white;
+}
+
+.certsystem-btn-secondary:hover { 
+    background: #5a6268; 
+}
+
+.certsystem-btn-sm {
+    padding: 8px 16px;
+    font-size: 13px;
+    min-height: 36px;
+}
+
+.certsystem-btn i {
+    font-size: 18px;
+}
+
+/* Tables */
+.certsystem-table { 
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.certsystem-table thead {
+    background: #f8f9fa;
+}
+
+.certsystem-table thead th {
+    font-weight: 600;
+    color: #2c3338;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e2e4e7;
+}
+
+.certsystem-table th, 
+.certsystem-table td { 
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e4e7;
+    vertical-align: middle;
+}
+
+.certsystem-table th:first-child,
+.certsystem-table td:first-child { 
+    padding-left: 20px;
+}
+
+.certsystem-table th:last-child,
+.certsystem-table td:last-child { 
+    padding-right: 20px;
+}
+
+.certsystem-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.certsystem-table tbody tr:hover { 
+    background-color: #f6f7f7;
+}
+
+.certsystem-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.certsystem-table .certsystem-actions { 
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.certsystem-table .certsystem-action-btn { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.certsystem-table .certsystem-action-btn:hover { 
+    transform: scale(1.1);
+}
+
+.certsystem-table .certsystem-action-view { 
+    color: #007cba;
+    background: rgba(0,124,186,0.1);
+    border-color: rgba(0,124,186,0.2);
+}
+
+.certsystem-table .certsystem-action-view:hover { 
+    background: rgba(0,124,186,0.2);
+}
+
+.certsystem-table .certsystem-action-edit { 
+    color: #ffb900;
+    background: rgba(255,185,0,0.1);
+    border-color: rgba(255,185,0,0.2);
+}
+
+.certsystem-table .certsystem-action-edit:hover { 
+    background: rgba(255,185,0,0.2);
+}
+
+.certsystem-table .certsystem-action-delete { 
+    color: #dc3232;
+    background: rgba(220,50,50,0.1);
+    border-color: rgba(220,50,50,0.2);
+}
+
+.certsystem-table .certsystem-action-delete:hover { 
+    background: rgba(220,50,50,0.2);
+}
+
+/* Checkboxes */
+.certsystem-checkbox { 
+    position: relative; 
+    display: inline-block;
+}
+
+.certsystem-checkbox input[type='checkbox'] { 
+    opacity: 0; 
+    position: absolute; 
+    z-index: -1;
+}
+
+.certsystem-checkbox label { 
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccd0d4;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.certsystem-checkbox input[type='checkbox']:checked + label { 
+    background: #007cba;
+    border-color: #007cba;
+}
+
+.certsystem-checkbox input[type='checkbox']:checked + label:after { 
+    content: '✓';
+    position: absolute;
+    top: -1px;
+    left: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Alerts */
+.certsystem-alert { 
+    padding: 16px 20px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.certsystem-alert-success {
+    color: #4f8d45;
+    background-color: #f7fff6;
+    border-color: #e6ffe3;
+}
+
+.certsystem-alert-danger {
+    color: #d63638;
+    background-color: #fff6f6;
+    border-color: #ffe3e3;
+}
+
+.certsystem-alert .certsystem-alert-close { 
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certsystem-alert .certsystem-alert-close:hover { 
+    opacity: 1;
+}
+
+/* Cards */
+.certsystem-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.certsystem-card-header {
+    padding: 20px 25px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.certsystem-card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3338;
+}
+
+.certsystem-card-body {
+    padding: 25px;
+}
+
+/* Form Controls */
+.certsystem-form-group {
+    margin-bottom: 20px;
+}
+
+.certsystem-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3338;
+    font-size: 14px;
+}
+
+.certsystem-form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #dcdcde;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.certsystem-form-control:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0,124,186,0.2);
+}
+
+.certsystem-form-text {
+    font-size: 13px;
+    color: #646970;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+textarea.certsystem-form-control {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Badge */
+.certsystem-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    background: #46b450;
+    color: white;
+}
+
+/* Pagination */
+.certsystem-pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0 0;
+    justify-content: center;
+    gap: 6px;
+}
+
+.certsystem-page-item {
+    margin: 0;
+}
+
+.certsystem-page-link {
+    display: block;
+    padding: 8px 14px;
+    color: #007cba;
+    text-decoration: none;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background: #fff;
+    min-width: 40px;
+    text-align: center;
+}
+
+.certsystem-page-link:hover {
+    background-color: #f6f7f7;
+    border-color: #007cba;
+    color: #007cba;
+}
+
+.certsystem-page-item.active .certsystem-page-link {
+    background-color: #007cba;
+    border-color: #007cba;
+    color: white;
+}
+
+/* Info Box */
+.certsystem-info-box {
+    background: #f0f6fc;
+    border: 1px solid #c5d9ed;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    color: #2c3338;
+}
+
+.certsystem-info-box strong {
+    color: #007cba;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .certsystem-table-title {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .certsystem-cs-button-container {
+        justify-content: center;
+    }
+    
+    .certsystem-btn {
+        margin: 4px;
+    }
+    
+    .certsystem-table {
+        font-size: 14px;
+    }
+    
+    .certsystem-table th,
+    .certsystem-table td {
+        padding: 10px 8px;
+    }
+    
+    .certsystem-table .certsystem-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .certsystem-table .certsystem-action-btn {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .certsystem-container {
+        padding: 0 15px;
+    }
+    
+    .certsystem-table-wrapper {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .certsystem-table-title {
+        padding: 20px;
+        margin: -20px -20px 20px;
+    }
+    
+    .certsystem-card-body {
+        padding: 20px;
+    }
+}
+
+/* Loading states */
+.certsystem-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.certsystem-loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: certsystem-spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes certsystem-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Settings Grid Layout */
+.certsystem-settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.certsystem-settings-column {
+    min-width: 0;
+}
+
+/* WordPress admin compatibility */
+.wrap {
+    background: #fff;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.wrap h1 {
+    color: #1d2327;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcdcde;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Responsive settings grid */
+@media (max-width: 1200px) {
+    .certsystem-settings-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certsystem-settings-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 782px) {
+    .wrap {
+        padding: 20px 15px;
+        margin: 15px 0;
+    }
+    
+    .wrap h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Material icons compatibility */
+.material-icons {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* jQuery UI Datepicker Custom Styles - Admin Only */
+.ui-datepicker {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif !important;
+    background: var(--certsystem-bg) !important;
+    border: 1px solid var(--certsystem-primary-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    z-index: 9999 !important;
+    padding: 0 !important;
+}
+
+.ui-datepicker.ui-datepicker-csmodal {
+    z-index: 100000 !important;
+    position: fixed !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background: var(--certsystem-primary) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 1rem 1rem 0 0 !important;
+    padding: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    color: #fff !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    border-radius: 0.5rem !important;
+}
+
+.ui-datepicker .ui-datepicker-prev:hover, 
+.ui-datepicker .ui-datepicker-next:hover {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+.ui-datepicker table {
+    width: 100% !important;
+    margin: 0 !important;
+    border-collapse: collapse !important;
+}
+
+.ui-datepicker th {
+    background: var(--certsystem-surface) !important;
+    padding: 0.75rem 0.5rem !important;
+    font-weight: 600 !important;
+    color: var(--certsystem-text-light) !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+
+.ui-datepicker td {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.ui-datepicker td a {
+    display: block !important;
+    padding: 0.75rem !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    color: var(--certsystem-text) !important;
+    border-radius: 0.5rem !important;
+    margin: 0.125rem !important;
+    font-weight: 500 !important;
+}
+
+.ui-datepicker td a:hover {
+    background: var(--certsystem-primary) !important;
+    color: #fff !important;
+}
+
+.ui-datepicker .ui-state-active {
+    background: var(--certsystem-primary) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.ui-datepicker .ui-state-highlight {
+    background: var(--certsystem-surface) !important;
+    color: var(--certsystem-text) !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    background: var(--certsystem-surface) !important;
+    border-top: 1px solid var(--certsystem-primary-border) !important;
+    text-align: center !important;
+    padding: 1rem !important;
+    border-radius: 0 0 1rem 1rem !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+    margin: 0 0.5rem !important;
+    padding: 0.5rem 1rem !important;
+    cursor: pointer !important;
+    background: var(--certsystem-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button:hover {
+    background: #16a34a !important;
+}
+
+/* Date input field styling */
+input[type="text"].hasDatepicker {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif !important;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236b7280"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>') !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 20px 20px !important;
+    padding-right: 48px !important;
+    cursor: pointer !important;
+    border: 1px solid var(--certsystem-primary-border) !important;
+    border-radius: 0.75rem !important;
+}
+
+input[type="text"].hasDatepicker:focus {
+    outline: none !important;
+    border-color: var(--certsystem-primary) !important;
+    box-shadow: 0 0 0 3px var(--certsystem-primary-light) !important;
+}
+
+/* Base Styles */
+body { 
+    margin-top: 32px !important; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Table Wrapper */
+.table-wrapper { 
+    background: #fff; 
+    padding: 20px 25px; 
+    margin: 30px 0; 
+    border-radius: 6px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,.1); 
+}
+
+/* Table Title */
+.table-title { 
+    padding: 20px 30px; 
+    background: linear-gradient(135deg, #435d7d 0%, #2c3e50 100%); 
+    color: #fff; 
+    margin: -20px -25px 20px; 
+    position: relative;
+}
+
+.table-title h2 { 
+    margin: 0; 
+    font-size: 24px; 
+    font-weight: 600;
+}
+
+.table-title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.table-title-left h2 {
+    margin: 0;
+    color: white;
+}
+
+.cs-button-container { 
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.cs-button { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-height: 38px;
+    color: white;
+}
+
+.dataTables_wrapper.no-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .dataTables_length,
+  .dataTables_filter {
+    margin: 0.5rem;
+  }
+  
+  .dataTables_filter label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dataTables_filter input {
+    margin-left: 0.5rem;
+  }
+
+
+.cs-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: rgb(170, 170, 170);
+
+}
+
+.cs-button-primary { 
+    background: #007bff; 
+    color: white;
+}
+
+.cs-button-primary:hover { 
+    background: #0056b3; 
+}
+
+.cs-button-success { 
+    background: #28a745; 
+    color: white;
+}
+
+.cs-button-success:hover { 
+    background: #218838; 
+}
+
+.cs-button-danger { 
+    background: #dc3545; 
+    color: white;
+}
+
+.cs-button-danger:hover { 
+    background: #c82333; 
+}
+
+.cs-button-secondary { 
+    background: #6c757d; 
+    color: white;
+}
+
+.cs-button-secondary:hover { 
+    background: #545b62; 
+}
+
+.cs-button-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 30px;
+}
+
+.cs-button i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+/* Tables */
+.certsystem-table { 
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.certsystem-table thead th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.certsystem-table th, 
+.certsystem-table td { 
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.certsystem-table th:first-child,
+.certsystem-table td:first-child { 
+    width: 50px;
+    text-align: center;
+}
+
+.certsystem-table th:last-child,
+.certsystem-table td:last-child { 
+    width: 120px;
+    text-align: center;
+}
+
+.certsystem-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.certsystem-table tbody tr:hover { 
+    background-color: #f8f9fa;
+}
+
+.certsystem-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.certsystem-table td .actions { 
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.certsystem-table td a { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.certsystem-table td a:hover { 
+    transform: scale(1.1);
+}
+
+.certsystem-table td a.view { 
+    color: #007bff;
+    background: rgba(0,123,255,0.1);
+}
+
+.certsystem-table td a.view:hover { 
+    background: rgba(0,123,255,0.2);
+}
+
+.certsystem-table td a.edit { 
+    color: #ffc107;
+    background: rgba(255,193,7,0.1);
+}
+
+.certsystem-table td a.edit:hover { 
+    background: rgba(255,193,7,0.2);
+}
+
+.certsystem-table td a.delete { 
+    color: #dc3545;
+    background: rgba(220,53,69,0.1);
+}
+
+.certsystem-table td a.delete:hover { 
+    background: rgba(220,53,69,0.2);
+}
+
+.certsystem-table td a i { 
+    font-size: 16px;
+}
+
+/* Custom Checkboxes */
+.custom-checkbox { 
+    position: relative; 
+    display: inline-block;
+}
+
+.custom-checkbox input[type='checkbox'] { 
+    opacity: 0; 
+    position: absolute; 
+    z-index: -1;
+}
+
+.custom-checkbox label { 
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox input[type='checkbox']:checked + label { 
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.custom-checkbox input[type='checkbox']:checked + label:after { 
+    content: '✓';
+    position: absolute;
+    top: -1px;
+    left: 2px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Alerts */
+.certsystem-alert { 
+    padding: 15px 20px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.certsystem-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.certsystem-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.certsystem-alert .alert-close { 
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.certsystem-alert .alert-close:hover { 
+    opacity: 1;
+}
+
+/* csmodals */
+.csmodal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.csmodal.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.csmodal-dialog {
+    background: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.csmodal.show .csmodal-dialog {
+    transform: scale(1);
+}
+
+.csmodal-content {
+    border-radius: 8px;
+}
+
+.csmodal-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.csmodal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.csmodal-body {
+    padding: 25px;
+}
+
+.csmodal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #dee2e6;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+.form-text {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 20px 25px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    background: #28a745;
+    color: white;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Info alert for shortcode */
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 3px;
+}
+
+.page-link {
+    display: block;
+    padding: 8px 12px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+/* Arrow button styles for pagination */
+.page-link[aria-label="Previous"],
+.page-link[aria-label="Next"] {
+    font-weight: bold;
+    min-width: 36px;
+    text-align: center;
+    padding: 8px 8px;
+}
+
+
+.page-item.disabled .page-link[aria-label="Previous"],
+.page-item.disabled .page-link[aria-label="Next"] {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+}
+
+/* Ellipsis styling */
+.page-item.disabled .page-link {
+    background: none;
+    border: none;
+    color: #6c757d;
+    padding: 8px 6px;
+}
+
+.page-item.disabled .page-link:hover {
+    background: none;
+    border: none;
+    color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-title-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .cs-button-container {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .cs-button {
+        margin: 5px;
+    }
+    
+    .certsystem-table {
+        font-size: 14px;
+    }
+    
+    .csmodal-dialog {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Loading animation */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Fade animations */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+div#certificates-table_paginate {
+    display: none;
+}
+
+.cs-container {
+    margin-right: 20px;
+}
+
+
+a.certsystem-btn.certsystem-btn-secondary {
+    padding: 0px 22px 0px 22px;
+}
+
+
+td.certsystem-template-actions {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+

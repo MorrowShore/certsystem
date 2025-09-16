@@ -1,0 +1,510 @@
+/* cs (certsystem) cert css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.certsystem-container {
+    width: 900px;
+    height: 650px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
+                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certsystem-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 49%, rgba(201, 176, 55, 0.05) 50%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, rgba(201, 176, 55, 0.05) 50%, transparent 51%);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+.certsystem-content {
+    position: relative;
+    z-index: 2;
+    padding: 90px 90px 90px 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.decorative-header {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+    letter-spacing: 12px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.certsystem-title {
+    color: #000000;
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.certsystem-subtitle {
+    font-size: 20px;
+    color: rgb(0 0 0 / 80%);
+    letter-spacing: 6px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 50%);
+    font-weight: bold;
+}
+
+.decorative-line {
+    width: 300px;
+    height: 2px;
+    background: transparent;
+    margin: 20px auto;
+}
+
+.certifies-text {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+}
+
+.student-name {
+    color: #004b3e;
+    font-size: 42px;
+    margin: 15px 0 15px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+.completion-text {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+}
+
+.course-name {
+    color: #004b3e;
+    font-size: 32px;
+    margin: 15px 0 15px 0;
+    font-weight: 600;
+    line-height: 1.3;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+.certsystem-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-item {
+    text-align: center;
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.detail-value {
+    font-size: 18px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.extra-note {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+}
+
+.certsystem-footer {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    right: 50px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.completion-date {
+    text-align: left;
+    order: 1; /* Make completion date first */
+}
+
+.completion-date .detail-label {
+    font-size: 12px;
+    color: #000000;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+}
+
+.completion-date .detail-value {
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    color: #000000;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.certsystem-id {
+    text-align: center;
+    order: 2; /* puts certificate ID in second placee lol */
+}
+
+.certsystem-id .detail-label {
+    font-size: 12px;
+    color: #000000;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+}
+
+.certsystem-id .detail-value {
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    color: #000000;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.qr-code {
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.qr-code canvas {
+    background: transparent !important;
+    border-radius: 4px;
+    background: transparent;
+    padding: 5px;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+
+.qr-code-canvas[data-qr-background="transparent"],
+.qr-code canvas[data-qr-background="transparent"] {
+    background: transparent !important;
+}
+
+.qr-code-svg {
+    border: 2px solid #ddd;
+    background: transparent;
+    border-radius: 0px;
+}
+
+.decorative-corners {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 0px solid #00000000;
+    opacity: 0.6;
+}
+
+.corner-tl {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-tr {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+
+.corner-br {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+/* CRITICAL: Override the inline certificate-template styles */
+.certificate-template {
+    background: transparent !important;
+    border: none !important;
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 40px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.certificate-template > div {
+    background: transparent !important;
+    padding: 30px !important;
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+}
+
+.certificate-template h1 {
+    color: #000000 !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8) !important;
+    font-weight: bold !important;
+    letter-spacing: 2px !important;
+}
+
+.certificate-template h2 {
+    color: #003730 !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8) !important;
+    padding-bottom: 10px !important;
+    display: inline-block !important;
+    letter-spacing: 2px !important;
+}
+
+.certificate-template h3 {
+    color: #003730 !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8) !important;
+    font-style: italic !important;
+}
+
+.certificate-template p {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+/* force QR code to bottom right inside certificate template */
+.certificate-template .qr-code {
+    position: absolute !important;
+    bottom: 30px !important;
+    right: 23px !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .certsystem-container {
+        box-shadow: none;
+        background: white;
+    }
+    .certsystem-bg {
+        display: none;
+    }
+}
+
+/* Ccertificate System Iframe Overlay Styles --- DO NOT CHANGE --- BREAKS SHIT */
+#certsystem-iframe-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#certsystem-iframe-overlay > div {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+#certsystem-iframe-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10001;
+}
+
+#certsystem-close-iframe,
+#certsystem-download-png {
+    background: #ff4444;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#certsystem-download-png {
+    background: #22c55e;
+}
+
+#certsystem-close-iframe:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+#certsystem-download-png:hover {
+    background: #16a34a;
+    transform: scale(1.1);
+}
+
+#certsystem-certificate-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+iframe#certsystem-certificate-iframe {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#certsystem-iframe-overlay * {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #certsystem-iframe-overlay > div {
+        width: 98%;
+        height: 98%;
+    }
+    
+    #certsystem-iframe-controls {
+        top: 10px;
+        right: 10px;
+    }
+    
+    #certsystem-close-iframe,
+    #certsystem-download-pdf {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+.certsystem-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+    font-size: 16px;
+}
+
+.certificate-download-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 3px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+
+.certificate-download-btn:hover {
+    background: #16a34a;
+    transform: scale(1.1);
+}
+
+.certificate-page-body { 
+    margin: 0; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+    .certificate-download-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
