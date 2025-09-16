@@ -67,20 +67,9 @@ Yes, the plugin follows WordPress security standards with input validation, nonc
 = Can I customize the certificate design? =
 Yes, use the Template Builder to create custom certificate designs with your branding.
 
-= What happens if a certificate is not found? =
-The system shows a clear "No result found" message without revealing any internal information.
-
 = Can I export my certificate database? =
 Yes, you can export all certificates as CSV for backup or external processing.
 
-== Screenshots ==
-1. Certificate Management Dashboard - Clean interface for managing all certificates
-2. Add New Certificate Form - Intuitive form with auto-ID generation
-3. Bulk Import Interface - CSV upload for mass certificate creation  
-4. Template Builder - Custom certificate design editor
-5. Frontend Verification - Public verification form with results display
-6. Certificate Display - Professional certificate view with QR code
-7. Mobile Verification - Responsive design working on mobile devices
 
 == Changelog ==
 
@@ -103,7 +92,8 @@ This plugin is distributed in the hope that it will be useful, but WITHOUT ANY W
 You should have received a copy of the GNU General Public License along with this plugin. If not, see <https://www.gnu.org/licenses/>.
 
 == Support ==
-For support, feature requests, or bug reports, please use the WordPress plugin repository support forums or contact the plugin author.
+For support, feature requests, or bug reports, contact us at https://morrowshore.com
 
 == Contributing ==
+
 We welcome contributions! Please follow WordPress coding standards and security best practices when submitting patches or feature additions through the WordPress plugin repository.
